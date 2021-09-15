@@ -1,12 +1,6 @@
 <%@ page import="java.util.List" %>
 <%@ page import="java.util.Collections" %>
-<%@ page import="java.sql.Date" %><%--
-  Created by IntelliJ IDEA.
-  User: gether laz
-  Date: 2021/9/1
-  Time: 17:51
-  To change this template use File | Settings | File Templates.
---%>
+<%@ page import="java.sql.Date" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
