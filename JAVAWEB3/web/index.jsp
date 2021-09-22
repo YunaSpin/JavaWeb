@@ -9,6 +9,41 @@
       <script src="tabjs.js"></script>
   <body bgcolor="#ffe4c4">
   <div align="center">
+      <input type="text" list="data" autocomplete="off" onfocus="ShowName()">
+      <script>
+
+          function ShowName() {
+              console.log("执行到了这里");
+              var datashow = document.getElementById("data");
+              var dataArr = null;
+              var i = 0;
+              datashow.innerText = "";
+              var xmlhttp = new XMLHttpRequest();
+              //2.设置请求方式和请求地址
+              xmlhttp.open("post", "SS");
+              //3.发送请求
+              xmlhttp.send();
+              //4.监听状态的变化
+              xmlhttp.onreadystatechange = function () {
+                  console.log(xmlhttp.readyState);
+                  if (xmlhttp.readyState == 4 && xmlhttp.status == 200){
+                      var data = xmlhttp.response;
+                      console.log(data)
+                      /*dataArr[i] = data;
+                      i++;*/
+                  }
+                  dataArr = data.split(",");
+                  console.log(dataArr.length);
+                  for (var j = 0; j < dataArr.length-1; j++){
+                      // console.log(dataArr[j]+"hah");
+                      var opt = document.createElement("option");
+                      opt.innerText = dataArr[j];
+                      datashow.appendChild(opt);
+                  }
+              }
+          }
+      </script>
+        <datalist id="data"></datalist>
     <table border="2" width="600" id="tab">
       <tr id="bt">
         <th>name</th>

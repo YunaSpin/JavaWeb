@@ -33,7 +33,6 @@
       </library>
     </orderEntry>
     <orderEntry type="library" exported="" scope="PROVIDED" name="Tomcat 9.0.52" level="application_server_libraries" />
-    <orderEntry type="library" exported="" name="servlet-api" level="project" />
     <orderEntry type="library" exported="" name="jstl-1.2" level="project" />
   </component>
 </module>
